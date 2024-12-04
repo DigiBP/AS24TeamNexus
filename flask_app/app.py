@@ -3,55 +3,59 @@ import googleapiclient.discovery
 from google.oauth2 import service_account
 import json
 
+app = Flask(__name__)
 
+# Load configuration from JSON file
+with open("config.json") as config_file:
+    config = json.load(config_file)
 
+# Make sure the credentials are loaded after config is available
 def get_credentials():
-    
-
     scopes = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
-    GOOGLE_PRIVATE_KEY = config.get('GOOGLE_PRIVATE_KEY')
-    
+    GOOGLE_PRIVATE_KEY = config.get('private_key')
+    GOOGLE_CLIENT_EMAIL = config.get('client_email')
+
     account_info = {
-      "private_key": GOOGLE_PRIVATE_KEY,
-      "client_email": config.get('GOOGLE_CLIENT_EMAIL'),
-      "token_uri": "https://accounts.google.com/o/oauth2/token",
+        "private_key": GOOGLE_PRIVATE_KEY,
+        "client_email": GOOGLE_CLIENT_EMAIL,
+        "token_uri": "https://accounts.google.com/o/oauth2/token",
     }
     
     credentials = service_account.Credentials.from_service_account_info(account_info, scopes=scopes)
     return credentials
 
-
-def get_service(service_name='sheets', api_version='v4'):
+def get_service(service_name="sheets", api_version="v4"):
     credentials = get_credentials()
     service = googleapiclient.discovery.build(service_name, api_version, credentials=credentials)
     return service
-
-
-app = Flask(__name__)
-
-# Load configuration from JSON file
-with open('config.json') as config_file:
-    config = json.load(config_file)
 
 @app.route("/")
 def home():
     return "The app is running"
 
-@app.route("/key")
-def key():
-    print(f"Private Key: {GOOGLE_PRIVATE_KEY}")  # Debugging line
-
-@app.route('/patient_data', methods=['GET'])
+@app.route("/patient_data", methods=["GET"])
 def homepage():
     service = get_service()
-    spreadsheet_id = config.get('1jc_hXAUO6q9g7n-fKTxWhPYoNPaI9BN18pnz3o_HdaM/edit?pli=1&gid=0#gid=0')
-    range_name = config.get('GOOGLE_CELL_RANGE')
+    
+    # Ensure you extract the correct spreadsheet ID from the config file
+    spreadsheet_id = config.get("spreadsheet_id")  # Retrieve the spreadsheet ID from config.json
+    range_name = "Sheet1"  # Retrieve the entire Sheet1
 
+    # Get the entire content of Sheet1
     result = service.spreadsheets().values().get(
         spreadsheetId=spreadsheet_id, range=range_name).execute()
-    values = result.get('values', [])
+    
+    # Extract values from the result
+    values = result.get("values", [])
 
-    return render_template('index.html', values=values)
+    # Render the data in your template
+    return render_template("index.html", values=values)
+
+# decision making in decisions.py to keep the app lean
+
+
+def check_patient_status(patients, surgery_data, bending_angle, pain)
+
 
 
 if __name__ == '__main__':
