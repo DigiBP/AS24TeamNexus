@@ -2,10 +2,10 @@
 ### Patient Discharge Process after Total-Hip-Replacement Surgery
 
 # Team members
-Elisa Hemmig
-Justin Jouwena
-Dominique Jud
-Ramon Winkler
+Elisa Hemmig,
+Justin Jouwena,
+Dominique Jud,
+Ramon Winkler,
 
 # Coaches
 Andreas Martin
