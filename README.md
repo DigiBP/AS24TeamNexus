@@ -8,8 +8,8 @@ Dominique Jud,
 Ramon Winkler
 
 # Coaches
-Andreas Martin
-Devid Montecchiari
+Andreas Martin,
+Devid Montecchiari,
 Charuta Pande
 
 # Use-case Overview
