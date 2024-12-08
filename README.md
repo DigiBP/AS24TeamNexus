@@ -5,7 +5,7 @@
 Elisa Hemmig,
 Justin Jouwena,
 Dominique Jud,
-Ramon Winkler,
+Ramon Winkler
 
 # Coaches
 Andreas Martin
