@@ -51,6 +51,27 @@ Patients going home rely on detailed instructions to manage their recovery indep
 # To-Be Process
 # Running The Process
 # Make Scenarios
+<img width="960" alt="make_scenario" src="https://github.com/user-attachments/assets/08747c41-f638-4faa-8474-dcb864be8323">
+
+A Make Scenario was created as an external worker to generate and send customized medication prescriptions, physiotherapy prescriptions and medical certificates for each patient with a direct discharge from hospital to home. 
+
+**Step 1: Connect to Camunda engine and define patient variables**
+The Camunda engine notifies the scenario via webhook and a HTTP request module is used to fetch and lock the task. A Google sheet acts as patient database, where all patient information is saved. Each row corresponds to a patient and each column represents a variable. A filter is implemented to select for the latest patient entry by setting the bundle order position equal to the total number of bundles. A router module is added to create separate workflows, which are then activated by corresponding filters encoding the conditions for the patient variables. 
+
+**Step 2: Send medication prescription (every patient)**
+A customized medication prescription is generated for each patient. A medication list is created from the correspoding variables in the patient data base by a text aggregator module, which is inserted into a Google document that acts as template for the medication prescription. The customized medication prescription is saved on Google Drive and is retrieved by the file download module. The medication prescription is then sent to the patient email address along with a link, where the patient can schedule their first follow-up appointment. The last module of the branch is another HTTP request module notifying the Camunda engine about the completion of the external task. 
+
+**Step 3a: Send physiotherapy prescription**
+If a patient requires physiotherapy as per information in the patient data base, this branch is activated by means of a filter (physio = TRUE) and a customized physiotherapy prescription is prepared and sent to the patient by email. The instructions contain the generic reason for referral, an individualised status update on mobility and gait, as well as a generic follow-up plan. The customized document is created from a Google document template and saved on Google Drive (Module: "Create a document from a template"), and then retrieved (Module: "Download a file") and sent by email (Module: "Send an email") using the modules with the same functionalities as in step 1.
+
+**Step 3b: Send medical certificate (general)**
+If a patient works and no home office is possible, this branch is activated by means of a filter (working = TRUE, homeoffice = FALSE) and a general medical certificate is created for the employer and sent to the patient by email. It contains the duration of sick leave (6 weeks) and the preliminary return date, which is determined based on the surgery date. The same modules as in step 3a are used and configured appropriately. 
+
+**Step 3c: Send medical certificate (home office)**
+If a patient works and home office is possible, this branch is activated by means of a filter (working = TRUE, homeoffice = TRUE) and a medical certificate specifying the conditions for home office activities is created for the employer and sent to the patient by email. It contains the duration of sick leave (6 weeks) and the preliminary return date, which is determined based on the surgery date. The same modules as in step 3a are used and configured appropriately. 
+
+
+
 # Flask API
 # External worker
 
