@@ -73,6 +73,13 @@ If a patient works and home office is possible, this branch is activated by mean
 
 
 # Flask API
+Within a deepnote workspace a flask app was developed to store and return patient data. Deepnote is used to host the application. 
+The application integrates a large language model (LLM) from Hugging Face ("mistralai/Mistral-Nemo-Instruct-2407") to generate detailed rehabilitation reports for patients. These reports are automatically sent to the rehabilitation team.
+
+
+## Endpoints
+
+
 # External worker
 
 # Benefits
