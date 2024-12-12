@@ -213,7 +213,7 @@ The application integrates a large language model (LLM) from Hugging Face ("Hugg
 
 
 
-Link [deepnote.com](https://deepnote.com/workspace/Exercise-8e66c33b-eecd-42c8-bc44-7643f4fa0a86/project/TeamNexus-c9db920b-d439-4726-b52c-7a2b7d404be3/notebook/flask-app2-875a9f752d6743e3965809bb7b49cadb)
+Link [deepnote.com]([https://deepnote.com/workspace/Exercise-8e66c33b-eecd-42c8-bc44-7643f4fa0a86/project/TeamNexus-c9db920b-d439-4726-b52c-7a2b7d404be3/notebook/flask-app2-875a9f752d6743e3965809bb7b49cadb](https://deepnote.com/workspace/Exercise-8e66c33b-eecd-42c8-bc44-7643f4fa0a86/project/TeamNexus-c9db920b-d439-4726-b52c-7a2b7d404be3/notebook/Flask-APP-LLM-875a9f752d6743e3965809bb7b49cadb?utm_source=share-modal&utm_medium=product-shared-content&utm_campaign=notebook&utm_content=c9db920b-d439-4726-b52c-7a2b7d404be3))
 
 
 # Benefits
