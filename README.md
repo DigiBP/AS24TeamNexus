@@ -81,7 +81,7 @@ Patients going home rely on detailed instructions to manage their recovery indep
 # Running The Process
 
 ## Deepnote 
-The Flask Api is responsible to simulate the Hospital Patient Database, where the can get basic infos about the atient by providing the patient Id. <br/>
+The Flask API is responsible to simulate the Hospital Patient Database, where the can get basic infos about the atient by providing the patient Id. <br/>
 It also provides an Endpoint that generates a Report for the Rehabilitation Institute, and sends it to the Institute 
 Our Flask API runs on Deepnote. <br/>
 Head over to https://deepnote.com/workspace/Exercise-8e66c33b-eecd-42c8-bc44-7643f4fa0a86/project/AI4BP-Duplicate-c9db920b-d439-4726-b52c-7a2b7d404be3/notebook/flask-app2-875a9f752d6743e3965809bb7b49cadb?utm_source=share-modal&utm_medium=product-invite&utm_content=c9db920b-d439-4726-b52c-7a2b7d404be3 <br/>
@@ -212,9 +212,6 @@ The application integrates a large language model (LLM) from Hugging Face ("Hugg
 Link [deepnote.com](https://deepnote.com/workspace/Exercise-8e66c33b-eecd-42c8-bc44-7643f4fa0a86/project/TeamNexus-c9db920b-d439-4726-b52c-7a2b7d404be3/notebook/flask-app2-875a9f752d6743e3965809bb7b49cadb)
 
 
-
-# External worker
-
 # Benefits
 1. Streamlined Workflow: A unified digital system eliminates inefficiencies and reduces manual workload.
 2. Faster Discharge: Automation of document preparation ensures quicker discharge decisions.
@@ -232,6 +229,22 @@ Link [deepnote.com](https://deepnote.com/workspace/Exercise-8e66c33b-eecd-42c8-b
 - Deepnote (for Python programming - Flask API/External worker/**LLM**)
 
 # Conclusion
+## Scenario and Digitalisation Competences
+This scenario is based on a real-world experience of two surgery residents. Communication, document preparation, and appointment scheduling issues are significant resource drains for residents. Therefore, we consider this scenario both innovative and groundbreaking for improving efficiency. Thanks to our solution, residents around the world are less burdened by administrative tasks, allowing them to focus more on patient care.
+
+## Process Modelling and Automation
+"The process is modeled according to BPMN conventions, as learned during the Digitalisation of Business Processes in Healthcare module. After deploying the Flask application and integrating it with Make, multiple processes can be executed simultaneously."
+
+## Service Implementation and Integration
+Services are implemented appropriately in Python. Service integration is running and orchestration is appropriate.
+20%
+## Human-centric Interfaces
+Human-centric interfaces are provided. Human tasks are managed.
+10%
+
+
+
+
 # Acknowledgments
 # References
 # Disclaimer
