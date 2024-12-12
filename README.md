@@ -74,11 +74,39 @@ If a patient works and home office is possible, this branch is activated by mean
 
 # Flask API
 Within a deepnote workspace a flask app was developed to store and return patient data. Deepnote is used to host the application. 
-The application integrates a large language model (LLM) from Hugging Face ("mistralai/Mistral-Nemo-Instruct-2407") to generate detailed rehabilitation reports for patients. These reports are automatically sent to the rehabilitation team.
+The application integrates a large language model (LLM) from Hugging Face ("HuggingFaceH4/zephyr-7b-beta") to generate detailed rehabilitation reports for patients. These reports are automatically sent to the rehabilitation team.
 
 
 ## Endpoints
+# API Endpoints
 
+## Patient Endpoints
+
+| Endpoint                    | Method | Description                            | Request Body                                      | Response                          |
+|-----------------------------|--------|----------------------------------------|--------------------------------------------------|-----------------------------------|
+| `/api/patients`             | GET    | Retrieves a list of all patients       | None                                             | JSON array of patient details     |
+| `/api/patients`             | POST   | Creates a new patient                  | JSON object with patient details (e.g., `patient_id`, `patient_surname`, etc.) | Success message with created patient details |
+| `/api/patients/<id>`        | GET    | Retrieves details of a specific patient | None                                             | JSON object with patient details  |
+
+## Assessment Endpoints
+
+| Endpoint                    | Method | Description                            | Request Body                                      | Response                          |
+|-----------------------------|--------|----------------------------------------|--------------------------------------------------|-----------------------------------|
+| `/api/assessments`          | GET    | Retrieves a list of all assessments    | None                                             | JSON array of assessment details  |
+| `/api/assessments`          | POST   | Creates a new assessment               | JSON object with assessment details              | Success message with created assessment details |
+| `/api/assessments/<id>`     | GET    | Retrieves details of a specific assessment | None                                           | JSON object with assessment details  |
+
+## Report Endpoints
+
+| Endpoint                    | Method | Description                            | Request Body                                      | Response                          |
+|-----------------------------|--------|----------------------------------------|--------------------------------------------------|-----------------------------------|
+| `/api/sendreport`           | POST   | Generates and sends a medical report   | JSON object with patient data                    | Success message confirming report generation and sending |
+
+## Latest Data Endpoint
+
+| Endpoint                    | Method | Description                            | Request Body                                      | Response                          |
+|-----------------------------|--------|----------------------------------------|--------------------------------------------------|-----------------------------------|
+| `/api/latest`               | GET    | Retrieves the latest available data    | None                                             | JSON object with most recent data |
 
 # External worker
 
