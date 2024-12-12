@@ -76,33 +76,111 @@ If a patient works and home office is possible, this branch is activated by mean
 Within a deepnote workspace a flask app was developed to store and return patient data. Deepnote is used to host the application. 
 The application integrates a large language model (LLM) from Hugging Face ("HuggingFaceH4/zephyr-7b-beta") to generate detailed rehabilitation reports for patients. These reports are automatically sent to the rehabilitation team.
 
-## Patient Endpoints
+<table width="800">
+    <tr>
+        <th width="300"><b>Endpoint</b></th>
+        <th width="100"><b>Method</b></th>
+        <th width="200"><b>Description</b></th>
+        <th width="100"><b>Request Body</b></th>
+        <th width="100"><b>Response</b></th>
+    </tr>
+    <tr>
+        <td>/api/patients</td>
+        <td>GET</td>
+        <td>Retrieves a list of all patients</td>
+        <td>None</td>
+        <td>JSON array of patient details</td>
+    </tr>
+    <tr>
+        <td>/api/patients</td>
+        <td>POST</td>
+        <td>Creates a new patient</td>
+        <td>JSON object with patient details (e.g., patient_id, patient_surname, etc.)</td>
+        <td>Success message with created patient details</td>
+    </tr>
+    <tr>
+        <td>/api/patients/&lt;id&gt;</td>
+        <td>GET</td>
+        <td>Retrieves details of a specific patient</td>
+        <td>None</td>
+        <td>JSON object with patient details</td>
+    </tr>
+</table>
 
-| Endpoint                    | Method | Description                            | Request Body                                      | Response                          |
-|-----------------------------|--------|----------------------------------------|--------------------------------------------------|-----------------------------------|
-| `/api/patients`             | GET    | Retrieves a list of all patients       | None                                             | JSON array of patient details     |
-| `/api/patients`             | POST   | Creates a new patient                  | JSON object with patient details (e.g., `patient_id`, `patient_surname`, etc.) | Success message with created patient details |
-| `/api/patients/<id>`        | GET    | Retrieves details of a specific patient | None                                             | JSON object with patient details  |
+<h3>Assessment Endpoints</h3>
+<table width="800">
+    <tr>
+        <th width="300"><b>Endpoint</b></th>
+        <th width="100"><b>Method</b></th>
+        <th width="200"><b>Description</b></th>
+        <th width="100"><b>Request Body</b></th>
+        <th width="100"><b>Response</b></th>
+    </tr>
+    <tr>
+        <td>/api/assessments</td>
+        <td>GET</td>
+        <td>Retrieves a list of all assessments</td>
+        <td>None</td>
+        <td>JSON array of assessment details</td>
+    </tr>
+    <tr>
+        <td>/api/assessments</td>
+        <td>POST</td>
+        <td>Creates a new assessment</td>
+        <td>JSON object with assessment details</td>
+        <td>Success message with created assessment details</td>
+    </tr>
+    <tr>
+        <td>/api/assessments/&lt;id&gt;</td>
+        <td>GET</td>
+        <td>Retrieves details of a specific assessment</td>
+        <td>None</td>
+        <td>JSON object with assessment details</td>
+    </tr>
+</table>
 
-## Assessment Endpoints
+<h3>Report Endpoints</h3>
+<table width="800">
+    <tr>
+        <th width="300"><b>Endpoint</b></th>
+        <th width="100"><b>Method</b></th>
+        <th width="200"><b>Description</b></th>
+        <th width="100"><b>Request Body</b></th>
+        <th width="100"><b>Response</b></th>
+    </tr>
+    <tr>
+        <td>/api/sendreport</td>
+        <td>POST</td>
+        <td>Generates and sends a medical report</td>
+        <td>JSON object with patient data</td>
+        <td>Success message confirming report generation and sending</td>
+    </tr>
+</table>
 
-| Endpoint                    | Method | Description                            | Request Body                                      | Response                          |
-|-----------------------------|--------|----------------------------------------|--------------------------------------------------|-----------------------------------|
-| `/api/assessments`          | GET    | Retrieves a list of all assessments    | None                                             | JSON array of assessment details  |
-| `/api/assessments`          | POST   | Creates a new assessment               | JSON object with assessment details              | Success message with created assessment details |
-| `/api/assessments/<id>`     | GET    | Retrieves details of a specific /n assessment | None                                           | JSON object with assessment details  |
+<h3>Latest Data Endpoint</h3>
+<table width="800">
+    <tr>
+        <th width="300"><b>Endpoint</b></th>
+        <th width="100"><b>Method</b></th>
+        <th width="200"><b>Description</b></th>
+        <th width="100"><b>Request Body</b></th>
+        <th width="100"><b>Response</b></th>
+    </tr>
+    <tr>
+        <td>/api/latest</td>
+        <td>GET</td>
+        <td>Retrieves the latest available data</td>
+        <td>None</td>
+        <td>JSON object with most recent data</td>
+    </tr>
+</table>
 
-## Report Endpoints
 
-| Endpoint                    | Method | Description                            | Request Body                                      | Response                          |
-|-----------------------------|--------|----------------------------------------|--------------------------------------------------|-----------------------------------|
-| `/api/sendreport`           | POST   | Generates and sends a medical report   | JSON object with patient data                    | Success message confirming report generation and sending |
 
-## Latest Data Endpoint
 
-| Endpoint                    | Method | Description                            | Request Body                                      | Response                          |
-|-----------------------------|--------|----------------------------------------|--------------------------------------------------|-----------------------------------|
-| `/api/latest`               | GET    | Retrieves the latest available data    | None                                             | JSON object with most recent data |
+Link [deepnote.com](https://deepnote.com/workspace/Exercise-8e66c33b-eecd-42c8-bc44-7643f4fa0a86/project/TeamNexus-c9db920b-d439-4726-b52c-7a2b7d404be3/notebook/flask-app2-875a9f752d6743e3965809bb7b49cadb)
+
+
 
 # External worker
 
