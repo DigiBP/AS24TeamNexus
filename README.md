@@ -55,6 +55,7 @@ Despite its structured nature, the discharge process is prone to bottlenecks. Th
 Patients going home rely on detailed instructions to manage their recovery independently, while those transferred to rehabilitation rely on the center for further care. However, in both pathways, the process is heavily manual, time-consuming, and dependent on effective coordination among doctors, MAs, secretaries, and physiotherapists. These inefficiencies, coupled with the reliance on subjective assessments and fragmented workflows, underscore the need for digital optimization to streamline tasks, reduce delays, and improve the overall quality of care.
 
 # As-Is Process
+![As- Is](https://github.com/user-attachments/assets/8152b619-9dca-4d6a-b24b-a31c62204d2f)
 
 # Problems and Goals
 **Fragmented Communication**
@@ -78,6 +79,9 @@ Patients going home rely on detailed instructions to manage their recovery indep
 - Why Digitalize: Providing a digital link to access their documents and schedule appointments.
 
 # To-Be Process
+![To- Be](https://github.com/user-attachments/assets/0ead5f23-00de-4dda-98cc-54b4c58f012e)
+
+
 # Running The Process
 
 ## Deepnote 
