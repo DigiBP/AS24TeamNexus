@@ -2,15 +2,44 @@
 ### Patient Discharge Process after Total-Hip-Replacement Surgery
 
 # Team members
-Elisa Hemmig,
-Justin Jouwena,
-Dominique Jud,
-Ramon Winkler
+<table width="800">
+    <tr>
+        <th width="150"><b>Name</b></th>
+        <th width="400"><b>Email</b></th>
+    </tr>
+    <tr>
+        <td>Elisa Hemmig</td>
+        <td>elisa.hemmig@students.fhnw.ch</td>
+    </tr>
+    <tr>
+        <td>Justin Jouwena</td>
+        <td>justin.jouwena@students.fhnw.ch</td>
+    </tr>
+    <tr>
+        <td>Dominique Jud</td>
+        <td>dominique.jud@students.fhnw.ch</td>
+    </tr>
+    <tr>
+        <td>Ramon Winkler</td>
+        <td>ramon.winkler@students.fhnw.ch</td>
+    </tr>
+</table>
 
 # Coaches
-Andreas Martin,
-Devid Montecchiari,
-Charuta Pande
+<table width="800">
+    <tr>
+        <th width="200"><b>Name</b></th>
+    </tr>
+    <tr>
+        <td>Andreas Martin</td>
+    </tr>
+    <tr>
+        <td>Devid Montecchiari</td>
+    </tr>
+    <tr>
+        <td>Charuta Pande</td>
+    </tr>
+</table>
 
 # Use-case Overview
 Post-surgery care for total hip replacement (THR) patients is a highly complex and multi-disciplinary process that presents significant challenges for digitalization. In Switzerland, approximately 16,000 THR surgeries are performed annually, with each case followed by a recovery process involving daily assessments, discharge planning, and coordination among various stakeholders. The complexity of this process arises from the reliance on subjective judgment, real-time decision-making, and the interdependence of multiple roles.
