@@ -90,7 +90,7 @@ The application integrates a large language model (LLM) from Hugging Face ("Hugg
 |-----------------------------|--------|----------------------------------------|--------------------------------------------------|-----------------------------------|
 | `/api/assessments`          | GET    | Retrieves a list of all assessments    | None                                             | JSON array of assessment details  |
 | `/api/assessments`          | POST   | Creates a new assessment               | JSON object with assessment details              | Success message with created assessment details |
-| `/api/assessments/<id>`     | GET    | Retrieves details of a specific assessment | None                                           | JSON object with assessment details  |
+| `/api/assessments/<id>`     | GET    | Retrieves details of a specific /n assessment | None                                           | JSON object with assessment details  |
 
 ## Report Endpoints
 
