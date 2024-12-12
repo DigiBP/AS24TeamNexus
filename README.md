@@ -81,21 +81,21 @@ Patients going home rely on detailed instructions to manage their recovery indep
 # Running The Process
 
 ## Deepnote 
-The Flask Api is responsible to simulate the Hospital Patient Database, where the can get basic infos about the atient by providing the patient Id.
+The Flask Api is responsible to simulate the Hospital Patient Database, where the can get basic infos about the atient by providing the patient Id. <br/>
 It also provides an Endpoint that generates a Report for the Rehabilitation Institute, and sends it to the Institute 
-Our Flask API runs on Deepnote.
-head over to https://deepnote.com/workspace/Exercise-8e66c33b-eecd-42c8-bc44-7643f4fa0a86/project/AI4BP-Duplicate-c9db920b-d439-4726-b52c-7a2b7d404be3/notebook/flask-app2-875a9f752d6743e3965809bb7b49cadb?utm_source=share-modal&utm_medium=product-invite&utm_content=c9db920b-d439-4726-b52c-7a2b7d404be3
+Our Flask API runs on Deepnote. <br/>
+Head over to https://deepnote.com/workspace/Exercise-8e66c33b-eecd-42c8-bc44-7643f4fa0a86/project/AI4BP-Duplicate-c9db920b-d439-4726-b52c-7a2b7d404be3/notebook/flask-app2-875a9f752d6743e3965809bb7b49cadb?utm_source=share-modal&utm_medium=product-invite&utm_content=c9db920b-d439-4726-b52c-7a2b7d404be3 <br/>
 Run the notebook and make sure the Flask app is running. Also make sure that incoming connections are allowed.
 
 ## Make
-Make has two service workers the first one is responsible for storing the Data in a google sheets:
-https://eu2.make.com/931083/scenarios/2854918/edit
+Make has two service workers the first one is responsible for storing the Data in a google sheets: <br/>
+https://eu2.make.com/931083/scenarios/2854918/edit <br/>
 Start the process and set it on on.
 
-The second service Worker is responsible to generate Emails for the Patient if he is discharged home:
-First it will chose which Documents are nessessary and then generate and send them to the Patient.
-https://eu2.make.com/931083/scenarios/2815956/edit
-Start the process and set it on on.
+The second service Worker is responsible to generate Emails for the Patient if he is discharged home: <br/>
+First it will chose which Documents are nessessary and then generate and send them to the Patient. <br/>
+https://eu2.make.com/931083/scenarios/2815956/edit <br/>
+Start the process and set it on on. <br/>
 
 ## Camunda
 
