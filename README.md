@@ -76,14 +76,16 @@ If a patient works and home office is possible, this branch is activated by mean
 Within a deepnote workspace a flask app was developed to store and return patient data. Deepnote is used to host the application. 
 The application integrates a large language model (LLM) from Hugging Face ("HuggingFaceH4/zephyr-7b-beta") to generate detailed rehabilitation reports for patients. These reports are automatically sent to the rehabilitation team.
 
-<table width="800">
+<table width="900">
     <tr>
         <th width="300"><b>Endpoint</b></th>
-        <th width="100"><b>Method</b></th>
-        <th width="200"><b>Description</b></th>
+        <th width="50"><b>Method</b></th>
+        <th width="250"><b>Description</b></th>
         <th width="100"><b>Request Body</b></th>
-        <th width="100"><b>Response</b></th>
+        <th width="200"><b>Response</b></th>
     </tr>
+    <!-- Patient Endpoints -->
+    <tr><td colspan="5"><b>Patient Endpoints</b></td></tr>
     <tr>
         <td>/api/patients</td>
         <td>GET</td>
@@ -105,17 +107,8 @@ The application integrates a large language model (LLM) from Hugging Face ("Hugg
         <td>None</td>
         <td>JSON object with patient details</td>
     </tr>
-</table>
-
-<h3>Assessment Endpoints</h3>
-<table width="800">
-    <tr>
-        <th width="300"><b>Endpoint</b></th>
-        <th width="100"><b>Method</b></th>
-        <th width="200"><b>Description</b></th>
-        <th width="100"><b>Request Body</b></th>
-        <th width="100"><b>Response</b></th>
-    </tr>
+    <!-- Assessment Endpoints -->
+    <tr><td colspan="5"><b>Assessment Endpoints</b></td></tr>
     <tr>
         <td>/api/assessments</td>
         <td>GET</td>
@@ -137,17 +130,8 @@ The application integrates a large language model (LLM) from Hugging Face ("Hugg
         <td>None</td>
         <td>JSON object with assessment details</td>
     </tr>
-</table>
-
-<h3>Report Endpoints</h3>
-<table width="800">
-    <tr>
-        <th width="300"><b>Endpoint</b></th>
-        <th width="100"><b>Method</b></th>
-        <th width="200"><b>Description</b></th>
-        <th width="100"><b>Request Body</b></th>
-        <th width="100"><b>Response</b></th>
-    </tr>
+    <!-- Report Endpoints -->
+    <tr><td colspan="5"><b>Report Endpoints</b></td></tr>
     <tr>
         <td>/api/sendreport</td>
         <td>POST</td>
@@ -155,17 +139,8 @@ The application integrates a large language model (LLM) from Hugging Face ("Hugg
         <td>JSON object with patient data</td>
         <td>Success message confirming report generation and sending</td>
     </tr>
-</table>
-
-<h3>Latest Data Endpoint</h3>
-<table width="800">
-    <tr>
-        <th width="300"><b>Endpoint</b></th>
-        <th width="100"><b>Method</b></th>
-        <th width="200"><b>Description</b></th>
-        <th width="100"><b>Request Body</b></th>
-        <th width="100"><b>Response</b></th>
-    </tr>
+    <!-- Latest Data Endpoint -->
+    <tr><td colspan="5"><b>Latest Data Endpoint</b></td></tr>
     <tr>
         <td>/api/latest</td>
         <td>GET</td>
@@ -174,6 +149,8 @@ The application integrates a large language model (LLM) from Hugging Face ("Hugg
         <td>JSON object with most recent data</td>
     </tr>
 </table>
+
+
 
 
 
