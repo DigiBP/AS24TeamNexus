@@ -251,5 +251,5 @@ The solution prioritizes human-centric design by facilitating seamless interacti
 # Disclaimer
 
 # Declaration
-Some of text and the logo in the Google document templates for the medication prescription, physiotherpay prescription and the medical certificates were generated using ChatGPT. 
+Some of text and the logo in the Google document templates for the medication prescription, physiotherapy prescription and the medical certificates were generated using ChatGPT. 
 Furthermore, ChatGPT was used as a helping tool for programming in Make. 
