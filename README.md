@@ -246,12 +246,6 @@ We implemented services using Python to ensure reliability and adaptability. The
 ## Human-centric Interfaces
 The solution prioritizes human-centric design by facilitating seamless interactions between users and automated systems. For instance, residents interact with the automated systems for scheduling and document generation, significantly reducing the manual workload for other stakeholders like Medical Assistants and secretaries. This streamlining enhances the overall process by eliminating common struggles in communication and appointment scheduling, ensuring smoother coordination among all parties. Patients also benefit from self-scheduling features and digital access to their discharge documents, promoting autonomy and clarity. These intuitive interfaces improve usability, reduce errors, and optimize the efficiency of the discharge process while keeping human roles central to the system.
 
-
-
-# Acknowledgments
-
-# Disclaimer
-
 # Declaration
 Some of text and the logo in the Google document templates for the medication prescription, physiotherapy prescription and the medical certificates were generated using ChatGPT. 
 Furthermore, ChatGPT was used as a helping tool for programming in Make. 
